@@ -5,7 +5,7 @@ export default function AdminDashboard({ onBack }) {
     const [members, setMembers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/members')
+        fetch('https://tvk-kallakuruchi.onrender.com/api/members')
             .then(res => res.json())
             .then(data => {
                 if (Array.isArray(data)) setMembers(data);
